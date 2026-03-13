@@ -1,0 +1,107 @@
+System check identified some issues:
+
+WARNINGS:
+?: (django_ratelimit.W001) cache backend django.core.cache.backends.redis.RedisCache is not officially supported
+ANALYTICS.CampaignDailyStat: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+	HINT: Configure the DEFAULT_AUTO_FIELD setting or the AnalyticsConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+ANALYTICS.ContentDailyStat: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+	HINT: Configure the DEFAULT_AUTO_FIELD setting or the AnalyticsConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+ANALYTICS.CreatorDailyStat: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+	HINT: Configure the DEFAULT_AUTO_FIELD setting or the AnalyticsConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+AUTH.Country: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+	HINT: Configure the DEFAULT_AUTO_FIELD setting or the AuthConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+AUTH.EmailVerification: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+	HINT: Configure the DEFAULT_AUTO_FIELD setting or the AuthConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+AUTH.User: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+	HINT: Configure the DEFAULT_AUTO_FIELD setting or the AuthConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+SOCIAL_INTELLIGENCE.Alert: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+	HINT: Configure the DEFAULT_AUTO_FIELD setting or the SocialIntelligenceConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+SOCIAL_INTELLIGENCE.EntityCompetitor: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+	HINT: Configure the DEFAULT_AUTO_FIELD setting or the SocialIntelligenceConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+SOCIAL_INTELLIGENCE.EntityDailyStat: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+	HINT: Configure the DEFAULT_AUTO_FIELD setting or the SocialIntelligenceConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+SOCIAL_INTELLIGENCE.EntityKeyword: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+	HINT: Configure the DEFAULT_AUTO_FIELD setting or the SocialIntelligenceConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+SOCIAL_INTELLIGENCE.ExtractedKeyword: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+	HINT: Configure the DEFAULT_AUTO_FIELD setting or the SocialIntelligenceConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+SOCIAL_INTELLIGENCE.Mention: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+	HINT: Configure the DEFAULT_AUTO_FIELD setting or the SocialIntelligenceConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+SOCIAL_INTELLIGENCE.MentionEntity: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+	HINT: Configure the DEFAULT_AUTO_FIELD setting or the SocialIntelligenceConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+SOCIAL_INTELLIGENCE.MentionSentiment: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+	HINT: Configure the DEFAULT_AUTO_FIELD setting or the SocialIntelligenceConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+SOCIAL_INTELLIGENCE.MentionTopic: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+	HINT: Configure the DEFAULT_AUTO_FIELD setting or the SocialIntelligenceConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+SOCIAL_INTELLIGENCE.TrackedEntity: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+	HINT: Configure the DEFAULT_AUTO_FIELD setting or the SocialIntelligenceConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+Operations to perform:
+  Apply all migrations: ANALYTICS, ANALYTICS_AGGREGATES, AUTH, CAMPAIGN_INTELLIGENCE, SOCIAL_INTELLIGENCE, admin, auth, contenttypes, django_celery_beat, django_celery_results, sessions, token_blacklist
+Running migrations:
+  Applying SOCIAL_INTELLIGENCE.0001_initial_squashed_0002_alter_alert_id_alter_entitycompetitor_id_and_more...Traceback (most recent call last):
+  File "C:\Users\HP\Documents\temitope\NEXORA TECHNOLOGIES\code\naxora-backend-\backend\myenv\Lib\site-packages\django\db\backends\utils.py", line 103, in _execute
+    return self.cursor.execute(sql)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Documents\temitope\NEXORA TECHNOLOGIES\code\naxora-backend-\backend\myenv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 356, in execute
+    return super().execute(query)
+           ^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: near "[]": syntax error
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\temitope\NEXORA TECHNOLOGIES\code\naxora-backend-\backend\NEXORAA\manage.py", line 22, in <module>
+    main()
+  File "C:\Users\HP\Documents\temitope\NEXORA TECHNOLOGIES\code\naxora-backend-\backend\NEXORAA\manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "C:\Users\HP\Documents\temitope\NEXORA TECHNOLOGIES\code\naxora-backend-\backend\myenv\Lib\site-packages\django\core\management\__init__.py", line 442, in execute_from_command_line
+    utility.execute()
+  File "C:\Users\HP\Documents\temitope\NEXORA TECHNOLOGIES\code\naxora-backend-\backend\myenv\Lib\site-packages\django\core\management\__init__.py", line 436, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "C:\Users\HP\Documents\temitope\NEXORA TECHNOLOGIES\code\naxora-backend-\backend\myenv\Lib\site-packages\django\core\management\base.py", line 416, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "C:\Users\HP\Documents\temitope\NEXORA TECHNOLOGIES\code\naxora-backend-\backend\myenv\Lib\site-packages\django\core\management\base.py", line 460, in execute
+    output = self.handle(*args, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Documents\temitope\NEXORA TECHNOLOGIES\code\naxora-backend-\backend\myenv\Lib\site-packages\django\core\management\base.py", line 107, in wrapper
+    res = handle_func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Documents\temitope\NEXORA TECHNOLOGIES\code\naxora-backend-\backend\myenv\Lib\site-packages\django\core\management\commands\migrate.py", line 353, in handle
+    post_migrate_state = executor.migrate(
+                         ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Documents\temitope\NEXORA TECHNOLOGIES\code\naxora-backend-\backend\myenv\Lib\site-packages\django\db\migrations\executor.py", line 135, in migrate
+    state = self._migrate_all_forwards(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Documents\temitope\NEXORA TECHNOLOGIES\code\naxora-backend-\backend\myenv\Lib\site-packages\django\db\migrations\executor.py", line 167, in _migrate_all_forwards
+    state = self.apply_migration(
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Documents\temitope\NEXORA TECHNOLOGIES\code\naxora-backend-\backend\myenv\Lib\site-packages\django\db\migrations\executor.py", line 255, in apply_migration
+    state = migration.apply(state, schema_editor)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Documents\temitope\NEXORA TECHNOLOGIES\code\naxora-backend-\backend\myenv\Lib\site-packages\django\db\migrations\migration.py", line 132, in apply
+    operation.database_forwards(
+  File "C:\Users\HP\Documents\temitope\NEXORA TECHNOLOGIES\code\naxora-backend-\backend\myenv\Lib\site-packages\django\db\migrations\operations\models.py", line 97, in database_forwards
+    schema_editor.create_model(model)
+  File "C:\Users\HP\Documents\temitope\NEXORA TECHNOLOGIES\code\naxora-backend-\backend\myenv\Lib\site-packages\django\db\backends\base\schema.py", line 512, in create_model
+    self.execute(sql, params or None)
+  File "C:\Users\HP\Documents\temitope\NEXORA TECHNOLOGIES\code\naxora-backend-\backend\myenv\Lib\site-packages\django\db\backends\base\schema.py", line 204, in execute
+    cursor.execute(sql, params)
+  File "C:\Users\HP\Documents\temitope\NEXORA TECHNOLOGIES\code\naxora-backend-\backend\myenv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Documents\temitope\NEXORA TECHNOLOGIES\code\naxora-backend-\backend\myenv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Documents\temitope\NEXORA TECHNOLOGIES\code\naxora-backend-\backend\myenv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Documents\temitope\NEXORA TECHNOLOGIES\code\naxora-backend-\backend\myenv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\HP\Documents\temitope\NEXORA TECHNOLOGIES\code\naxora-backend-\backend\myenv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HP\Documents\temitope\NEXORA TECHNOLOGIES\code\naxora-backend-\backend\myenv\Lib\site-packages\django\db\backends\utils.py", line 103, in _execute
+    return self.cursor.execute(sql)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Documents\temitope\NEXORA TECHNOLOGIES\code\naxora-backend-\backend\myenv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 356, in execute
+    return super().execute(query)
+           ^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: near "[]": syntax error
