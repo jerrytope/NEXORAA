@@ -117,12 +117,18 @@ WSGI_APPLICATION = 'NEXORAA.wsgi.application'
 # Fixed — no fallback, will error clearly if DATABASE_URL is missing
 import os
 
-DATABASES = {
-    'default': dj_database_url.parse(
-        os.environ.get('DATABASE_URL')
-    )
-}
+# DATABASES = {
+#     'default': dj_database_url.parse(
+#         os.environ.get('DATABASE_URL')
+#     )
+# }
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 from pathlib import Path
 
